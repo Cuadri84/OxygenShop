@@ -3,22 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Oxygen Shop</title>
   </head>
 
   <body>
     <header>
-      <nav>
-        <h1>Oxygen Shop</h1>
-        <a href="#mission">WHY US</a>
-        <a href="#featured_tea">BENEFITS</a>
-        <a href="#locations">PRICES</a>
-        <a href="#mission">CONTACT</a>
+      <nav class="nav">
+        <h1 class="nav__name">OXYGENShop</h1>
+        <div class="nav__menu">
+          <input type="checkbox" id="burguer" />
+          <label for="burguer"></label>
+        </div>
+        <!-- <ul>
+          <a href="#whyus" class="nav__link">WHY US</a>
+          <a href="#benefits" class="nav__link">BENEFITS</a>
+          <a href="#prices" class="nav__link">PRICES</a>
+          <a href="#contact" class="nav__link">CONTACT</a>
+        </ul> -->
       </nav>
     </header>
     <main>
-      <section>
+      <section class="section1">
         <h1>Sell More!</h1>
         <h4>Open shop on our platform and increase your sales</h4>
         <input type="button" value="Open your shop" />
