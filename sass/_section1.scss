@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Space+Mono&display=swap");
+
+// variable
+$font-two: "Open Sans";
+
+.section1 h1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.section1 h4 {
+  margin-top: 20px;
+  font-size: 16px;
+  max-width: 60%;
+  font-family: $font-two;
+}
+
+.section1 h2 {
+  margin-top: 13px;
+  font-weight: 300;
+  max-width: 70%;
+}
+
+.section1 {
+  background-color: white;
+  &__images {
+    margin-top: 25px;
+  }
+  &__image1 {
+    width: 30%;
+  }
+  &__image2and3 {
+    width: 45%;
+  }
+  & button {
+    margin-top: 28px;
+    margin-bottom: 51px;
+    font-size: 15px;
+    font-family: $font-two;
+    font-weight: 700;
+    height: 57px;
+    width: 85%;
+    max-width: 440px;
+    color: white;
+    background: #08a6e4;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 40px;
+    border-color: transparent;
+  }
+}

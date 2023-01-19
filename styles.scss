@@ -1,9 +1,9 @@
+@use "sass/_section1.scss";
+@use "sass/_section2.scss";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Space+Mono&display=swap");
 
 //variables
 $font-one: "Raleway";
-$font-two: "Open Sans";
 
 $blue: #08a6e4;
 $red: #fb3b64;
@@ -12,19 +12,21 @@ $background-color: white;
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: $font-one;
 }
 body {
   min-width: 320px;
 }
+
 header {
   width: 100%;
+  //altura del header cambiar si estan los links
   height: 70px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   background-color: $background-color;
 }
 
@@ -42,12 +44,18 @@ header {
   &__menu {
     width: 10%;
     display: inline-block;
+    &__input {
+      display: none;
+    }
   }
 }
+
 input {
   display: none;
+  cursor: pointer;
 }
 input + label {
+  cursor: pointer;
   display: inline-block;
   height: 12px;
   width: 20px;
@@ -60,12 +68,27 @@ input:checked + label {
   background-image: url("./assets/blueCross.png");
   background-size: 20px;
 }
+//NO funciona hamburquesa para los links
+.nav__links {
+  display: none;
+}
+
+input:checked + .nav__links {
+  display: block;
+  background: white;
+  width: 100vw;
+}
+
 main {
   text-align: center;
   position: relative;
   top: 140px;
 }
+img {
+  width: 100%;
+}
 footer {
   position: relative;
-  top: 80px;
+  //altura del footer
+  top: 180px;
 }

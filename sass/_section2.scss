@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Space+Mono&display=swap");
+
+// variable
+$font-two: "Open Sans";
+
+.section2 {
+  background-color: #f7f7f7;
+  &__1 {
+    background-color: white;
+    width: 85%;
+    margin-bottom: 41px;
+  }
+
+  &__2 {
+    background-color: white;
+    width: 85%;
+    margin-bottom: 41px;
+  }
+  &__3 {
+    background-color: white;
+    width: 85%;
+    margin-bottom: 41px;
+  }
+}
+.section2__1text {
+  margin-top: 26px;
+  margin-bottom: 51px;
+  width: 85%;
+  text-align: start;
+}
+.section2__1text h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.section2__1text h5 {
+  margin-top: 28px;
+  margin-bottom: 51px;
+  font-size: 14px;
+  font-family: $font-two;
+  font-weight: 400;
+}
+
+.section2__2text {
+  margin-top: 26px;
+  margin-bottom: 51px;
+  width: 85%;
+  text-align: start;
+}
+.section2__2text h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-right: 5%;
+}
+.section2__2text h5 {
+  margin-top: 28px;
+  margin-bottom: 51px;
+  font-size: 14px;
+  font-family: $font-two;
+  font-weight: 400;
+}
+
+.section2__3text {
+  margin-top: 26px;
+  margin-bottom: 51px;
+  width: 85%;
+  text-align: start;
+}
+.section2__3text h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.section2__3text h5 {
+  margin-top: 28px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-family: $font-two;
+  font-weight: 400;
+}
+
+.redcircle {
+  position: relative;
+  width: 35%;
+  top: 90px;
+  left: 50px;
+  z-index: 1;
+}
+
+.portatil {
+  position: relative;
+  width: 65%;
+  z-index: 2;
+}
+.bluecircle {
+  position: relative;
+  width: 36%;
+  top: 110px;
+  left: -20px;
+  z-index: 1;
+}
+
+.phone {
+  position: relative;
+  width: 50%;
+  z-index: 2;
+}
