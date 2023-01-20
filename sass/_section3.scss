@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Space+Mono&display=swap");
+
+// variable
+$font-two: "Open Sans";
+$red: #fb3b64;
+$blue: #07ace6;
+$green: #55dfb4;
+.section3 h2 {
+  margin-top: 36px;
+  font-weight: 400;
+}
+
+.section3 h3 {
+  font-size: 46px;
+  font-weight: 300;
+  font-family: $font-two;
+}
+.section3 h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section3 img {
+  width: 5%;
+}
+
+.section3 {
+  &__perks {
+    padding: 10px 0;
+    &__img {
+      display: inline-block;
+    }
+    &__h5 {
+      display: inline-block;
+      margin-left: 10px;
+      font-family: $font-two;
+    }
+  }
+  &__basic {
+    width: 80%;
+    margin: 40px auto;
+    border: 1px solid $red;
+    border-radius: 18px;
+    //en desktop
+    // width: 90%;
+    // box-shadow: 2px 5px 20px #f5a1b3;
+    &__h3 {
+      color: $red;
+    }
+    &__price {
+      display: inline-block;
+    }
+    &__conditions {
+      display: inline-block;
+      text-align: start;
+      padding: 10px 0 40px 0;
+      margin-left: 25px;
+    }
+    & button {
+      font-size: 15px;
+      font-family: $font-two;
+      font-weight: 700;
+      height: 57px;
+      width: 60%;
+      max-width: 440px;
+      color: white;
+      background: $red;
+      border-radius: 40px;
+      border-color: transparent;
+    }
+  }
+  &__professional {
+    width: 80%;
+    margin: 40px auto;
+    border: 1px solid $blue;
+    border-radius: 18px;
+    //en desktop
+    // width: 90%;
+    // box-shadow: 2px 5px 20px $blue;
+    &__h3 {
+      color: $blue;
+    }
+    & button {
+      font-size: 15px;
+      font-family: $font-two;
+      font-weight: 700;
+      height: 57px;
+      width: 60%;
+      max-width: 440px;
+      color: white;
+      background: $blue;
+      border-radius: 40px;
+      border-color: transparent;
+    }
+  }
+  &__premium {
+    width: 80%;
+    margin: 40px auto;
+    border: 1px solid $green;
+    border-radius: 18px;
+    //en desktop
+    // width: 90%;
+    // box-shadow: 2px 5px 20px $green;
+    &__h3 {
+      color: $green;
+    }
+    & button {
+      font-size: 15px;
+      font-family: $font-two;
+      font-weight: 700;
+      height: 57px;
+      width: 60%;
+      max-width: 440px;
+      color: white;
+      background: $green;
+      border-radius: 40px;
+      border-color: transparent;
+    }
+  }
+}
