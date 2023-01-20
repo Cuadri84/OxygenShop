@@ -18,7 +18,7 @@
 
 .section1 h2 {
   margin-top: 13px;
-  font-weight: 300;
+  font-weight: 500;
   max-width: 70%;
 }
 
@@ -48,6 +48,10 @@
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   border-radius: 40px;
   border-color: transparent;
+}
+
+#pcBig {
+  display: none;
 }
 
 .section2 {
@@ -363,6 +367,28 @@
   margin-left: 10px;
 }
 
+@media only screen and (min-width: 481px) {
+  .section1 h2 {
+    font-size: 36x;
+  }
+  .section1__image1 {
+    max-width: 12%;
+  }
+  .section1__image2and3 {
+    max-width: 18%;
+  }
+  .section1__images {
+    display: flex;
+    flex-direction: row;
+    padding: 4% 10%;
+  }
+  #pc {
+    display: none;
+  }
+  #pcBig {
+    display: block;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0 auto;

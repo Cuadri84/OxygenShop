@@ -17,7 +17,7 @@ $font-two: "Open Sans";
 
 .section1 h2 {
   margin-top: 13px;
-  font-weight: 300;
+  font-weight: 500;
   max-width: 70%;
 }
 
@@ -47,4 +47,8 @@ $font-two: "Open Sans";
     border-radius: 40px;
     border-color: transparent;
   }
+}
+
+#pcBig {
+  display: none;
 }
