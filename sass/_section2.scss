@@ -30,86 +30,95 @@ $font-two: "Open Sans";
   }
 }
 .section2__1text {
-  margin-top: 26px;
   margin-bottom: 51px;
   width: 85%;
   text-align: start;
-}
-.section2__1text h2 {
-  font-size: 30px;
-  font-weight: 400;
-}
-.section2__1text h5 {
-  margin-top: 28px;
-  padding-bottom: 30px;
-  font-size: 14px;
-  font-family: $font-two;
-  font-weight: 500;
+  & h2 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  & h5 {
+    margin-top: 28px;
+    padding-bottom: 30px;
+    font-size: 14px;
+    font-family: $font-two;
+    font-weight: 500;
+  }
+  &__line {
+    display: none;
+  }
 }
 
 .section2__2text {
-  margin-top: 26px;
   margin-bottom: 51px;
   width: 85%;
   text-align: start;
-}
-.section2__2text h2 {
-  font-size: 30px;
-  font-weight: 400;
-  margin-right: 5%;
-}
-.section2__2text h5 {
-  margin-top: 28px;
-  padding-bottom: 30px;
-  font-size: 14px;
-  font-family: $font-two;
-  font-weight: 500;
+  & h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-right: 5%;
+  }
+  & h5 {
+    margin-top: 28px;
+    padding-bottom: 30px;
+    font-size: 14px;
+    font-family: $font-two;
+    font-weight: 500;
+  }
+  &__line {
+    display: none;
+  }
 }
 
 .section2__3text {
-  margin-top: 26px;
   margin-bottom: 51px;
   width: 85%;
   text-align: start;
+  & h2 {
+    margin-left: 0;
+    padding-top: 30px;
+    width: 80%;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  & h3 {
+    margin-top: 28px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-family: $font-two;
+    font-weight: 400;
+  }
+  &__line {
+    display: none;
+  }
 }
-.section2__3text h2 {
-  margin-left: 0;
-  padding-top: 30px;
-  width: 80%;
-  font-size: 30px;
-  font-weight: 500;
-}
-.section2__3text h5 {
-  margin-top: 28px;
-  margin-bottom: 0px;
-  font-size: 14px;
-  font-family: $font-two;
-  font-weight: 400;
+.redrectangle {
+  display: none;
 }
 
 .redcircle {
   position: relative;
-  width: 35%;
-  top: 90px;
+  width: 110px;
+  top: 80px;
   left: 50px;
   z-index: 1;
 }
 
 .portatil {
   position: relative;
-  width: 65%;
+  width: 190px;
   z-index: 2;
 }
 .bluecircle {
   position: relative;
-  width: 36%;
-  top: 110px;
+  width: 130px;
+  top: 120px;
   left: -20px;
   z-index: 1;
 }
 
 .phone {
   position: relative;
-  width: 50%;
+  width: 175px;
   z-index: 2;
 }

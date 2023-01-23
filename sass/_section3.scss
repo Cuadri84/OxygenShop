@@ -41,9 +41,6 @@ $green: #55dfb4;
     margin: 40px auto;
     border: 1px solid $red;
     border-radius: 18px;
-    //en desktop
-    // width: 90%;
-    // box-shadow: 2px 5px 20px #f5a1b3;
     &__h3 {
       color: $red;
     }
@@ -53,10 +50,12 @@ $green: #55dfb4;
     &__conditions {
       display: inline-block;
       text-align: start;
-      padding: 10px 0 40px 0;
+      padding: 10px 0 0px 0;
       margin-left: 25px;
     }
     & button {
+      position: relative;
+      top: 30px;
       font-size: 15px;
       font-family: $font-two;
       font-weight: 700;
@@ -69,18 +68,21 @@ $green: #55dfb4;
       border-color: transparent;
     }
   }
+  &__basic:hover {
+    width: 90%;
+    box-shadow: 2px 5px 20px $red;
+  }
   &__professional {
     width: 80%;
     margin: 40px auto;
     border: 1px solid $blue;
     border-radius: 18px;
-    //en desktop
-    // width: 90%;
-    // box-shadow: 2px 5px 20px $blue;
     &__h3 {
       color: $blue;
     }
     & button {
+      position: relative;
+      top: 30px;
       font-size: 15px;
       font-family: $font-two;
       font-weight: 700;
@@ -93,18 +95,21 @@ $green: #55dfb4;
       border-color: transparent;
     }
   }
+  &__professional:hover {
+    width: 90%;
+    box-shadow: 2px 5px 20px $blue;
+  }
   &__premium {
     width: 80%;
     margin: 40px auto;
     border: 1px solid $green;
     border-radius: 18px;
-    //en desktop
-    // width: 90%;
-    // box-shadow: 2px 5px 20px $green;
     &__h3 {
       color: $green;
     }
     & button {
+      position: relative;
+      top: 30px;
       font-size: 15px;
       font-family: $font-two;
       font-weight: 700;
@@ -116,5 +121,9 @@ $green: #55dfb4;
       border-radius: 40px;
       border-color: transparent;
     }
+  }
+  &__premium:hover {
+    width: 90%;
+    box-shadow: 2px 5px 20px $green;
   }
 }

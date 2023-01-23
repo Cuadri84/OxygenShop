@@ -7,8 +7,10 @@ $blue: #08a6e4;
 .section4 {
   width: 90%;
   text-align: start;
+  margin-top: 80px;
   & img {
     width: 6%;
+    margin-left: 0;
   }
   & h2 {
     font-size: 47px;
@@ -24,6 +26,17 @@ $blue: #08a6e4;
     width: 85%;
     font-size: 12px;
     font-family: $font-two;
+  }
+  &__perks {
+    padding: 10px 0;
+    &__img {
+      display: inline-block;
+    }
+    &__h5 {
+      display: inline-block;
+      margin-left: 10px;
+      font-family: $font-two;
+    }
   }
   &__h4 {
     color: $blue;
