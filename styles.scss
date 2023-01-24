@@ -6,8 +6,10 @@
 @use "sass/desktop.scss";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
-//variables
+// variable
+
 $font-one: "Raleway";
+$font-two: "Open Sans";
 
 $blue: #08a6e4;
 $red: #fb3b64;
@@ -26,8 +28,7 @@ body {
 
 header {
   width: 100%;
-  //altura del header cambiar si estan los links
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   position: fixed;
   z-index: 3;
@@ -35,8 +36,9 @@ header {
 }
 
 .nav {
-  margin-top: 17px;
+  margin-top: 15px;
   margin-left: 25px;
+  margin-right: 20px;
   &__name {
     display: inline-block;
     width: 85%;
@@ -48,6 +50,7 @@ header {
   &__menu {
     width: 10%;
     display: inline-block;
+    text-align: right;
     &__input {
       display: none;
     }
@@ -95,4 +98,38 @@ footer {
   position: relative;
   //altura del footer
   top: 180px;
+}
+
+@media only screen and (min-width: 481px) {
+  .nav {
+    margin-left: 0;
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    &__name {
+      width: 40%;
+    }
+    &__menu {
+      display: none;
+    }
+  }
+  .nav__links {
+    display: flex;
+    font-family: $font-two;
+    font-weight: 800;
+
+    & ul {
+      & a {
+        padding: 0 20px;
+        color: #a5a5a5;
+        text-decoration: none;
+      }
+      & a:hover {
+        color: black;
+        text-decoration: underline $blue;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 18px;
+      }
+    }
+  }
 }
