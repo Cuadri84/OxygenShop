@@ -45,7 +45,9 @@ $green: #55dfb4;
       color: $red;
     }
     &__price {
+      margin-top: 70px;
       display: inline-block;
+      vertical-align: top;
     }
     &__conditions {
       display: inline-block;

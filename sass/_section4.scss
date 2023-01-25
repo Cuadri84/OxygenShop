@@ -32,6 +32,10 @@ $blue: #08a6e4;
     &__img {
       display: inline-block;
     }
+    & #tick {
+      margin-top: 5px;
+      vertical-align: top;
+    }
     &__h5 {
       display: inline-block;
       margin-left: 10px;

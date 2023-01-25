@@ -3,7 +3,7 @@
 @use "sass/_section3.scss";
 @use "sass/_section4.scss";
 @use "sass/_footer.scss";
-@use "sass/desktop.scss";
+@use "sass/_desktop.scss";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 // variable
@@ -31,13 +31,13 @@ header {
   padding-bottom: 15px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   position: fixed;
-  z-index: 3;
   background-color: $background-color;
+  z-index: 3;
 }
 
 .nav {
   margin-top: 15px;
-  margin-left: 25px;
+
   margin-right: 20px;
   &__name {
     display: inline-block;
@@ -49,6 +49,7 @@ header {
   }
   &__menu {
     width: 10%;
+    position: relative;
     display: inline-block;
     text-align: right;
     &__input {
@@ -61,7 +62,7 @@ input {
   display: none;
   cursor: pointer;
 }
-input + label {
+input + .nav__icon {
   cursor: pointer;
   display: inline-block;
   height: 12px;
@@ -69,7 +70,7 @@ input + label {
   background: url("./assets/burguer.png") no-repeat;
   background-size: 20px;
 }
-input:checked + label {
+input:checked + .nav__icon {
   height: 20px;
   width: 20px;
   background-image: url("./assets/blueCross.png");
@@ -80,16 +81,27 @@ input:checked + label {
   display: none;
 }
 
-input:checked + .nav__links {
+input:checked ~ .nav__links {
   display: block;
+  position: absolute;
+
+  top: 40px;
+  right: -83px;
   background: white;
-  width: 100vw;
+  z-index: 5;
+  & ul {
+    & li {
+      list-style-type: none;
+      text-align: left;
+      padding-left: 20px;
+    }
+  }
 }
+
+//-------------------------------------------
 
 main {
   text-align: center;
-  position: relative;
-  top: 140px;
 }
 img {
   width: 100%;
@@ -110,25 +122,33 @@ footer {
       width: 40%;
     }
     &__menu {
-      display: none;
+      display: block;
+      width: 40%;
     }
   }
+  input + .nav__icon {
+    display: none;
+  }
   .nav__links {
-    display: flex;
+    display: block;
     font-family: $font-two;
     font-weight: 800;
-
     & ul {
-      & a {
-        padding: 0 20px;
-        color: #a5a5a5;
-        text-decoration: none;
-      }
-      & a:hover {
-        color: black;
-        text-decoration: underline $blue;
-        text-decoration-thickness: 3px;
-        text-underline-offset: 18px;
+      & li {
+        display: inline-block;
+        & a {
+          padding: 0 20px;
+          color: #a5a5a5;
+          text-decoration: none;
+          font-size: 11px;
+          letter-spacing: 3.28px;
+        }
+        & a:hover {
+          color: black;
+          text-decoration: underline $blue;
+          text-decoration-thickness: 3px;
+          text-underline-offset: 18px;
+        }
       }
     }
   }

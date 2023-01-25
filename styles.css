@@ -24,6 +24,7 @@
 
 .section1 {
   background-color: white;
+  padding-top: 120px;
 }
 .section1__images {
   margin-top: 25px;
@@ -57,6 +58,11 @@
 .section2 {
   background-color: #f7f7f7;
 }
+.section2__block {
+  content: "";
+  width: 100%;
+  height: 42px;
+}
 .section2__1 {
   background-color: white;
   width: 85%;
@@ -81,11 +87,11 @@
 }
 
 .section2__1text {
-  margin-bottom: 51px;
   width: 85%;
   text-align: start;
 }
 .section2__1text h2 {
+  padding-top: 175px;
   font-size: 30px;
   font-weight: 400;
 }
@@ -101,7 +107,6 @@
 }
 
 .section2__2text {
-  margin-bottom: 51px;
   width: 85%;
   text-align: start;
 }
@@ -129,13 +134,12 @@
 .section2__3text h2 {
   margin-left: 0;
   padding-top: 30px;
+  padding-bottom: 20px;
   width: 80%;
   font-size: 30px;
   font-weight: 500;
 }
 .section2__3text h3 {
-  margin-top: 28px;
-  margin-bottom: 0px;
   font-size: 14px;
   font-family: "Open Sans";
   font-weight: 400;
@@ -144,21 +148,27 @@
   display: none;
 }
 
+.section2__1imgs {
+  position: relative;
+}
+
 .redrectangle {
   display: none;
 }
 
 .redcircle {
-  position: relative;
+  position: absolute;
   width: 110px;
-  top: 80px;
-  left: 50px;
+  top: 25px;
+  left: 130px;
   z-index: 1;
 }
 
 .portatil {
-  position: relative;
+  position: absolute;
   width: 190px;
+  top: 50px;
+  left: 45px;
   z-index: 2;
 }
 
@@ -217,7 +227,9 @@
   color: #fb3b64;
 }
 .section3__basic__price {
+  margin-top: 70px;
   display: inline-block;
+  vertical-align: top;
 }
 .section3__basic__conditions {
   display: inline-block;
@@ -328,6 +340,10 @@
 .section4__perks__img {
   display: inline-block;
 }
+.section4__perks #tick {
+  margin-top: 5px;
+  vertical-align: top;
+}
 .section4__perks__h5 {
   display: inline-block;
   margin-left: 10px;
@@ -425,6 +441,11 @@
   #pcBig {
     display: block;
   }
+  .section2__block {
+    content: "";
+    width: 100%;
+    height: 105px;
+  }
   .section2__1 {
     display: flex;
     flex-direction: row-reverse;
@@ -453,15 +474,17 @@
   .redrectangle {
     position: relative;
     width: 160px;
-    top: 110px;
-    left: 80px;
+    top: 0px;
+    left: 0px;
     display: block;
   }
   .redcircle {
     display: none;
   }
   .portatil {
-    width: 280px;
+    position: relative;
+    width: 180px;
+    right: 120px;
   }
   .section2__2 {
     display: flex;
@@ -527,6 +550,9 @@
     flex-direction: column;
     justify-content: space-between;
     padding-top: 30px;
+  }
+  .section3__basic__price {
+    margin-top: 0;
   }
   .section3__basic__conditions {
     margin: 10px 0;
@@ -594,13 +620,12 @@ header {
   padding-bottom: 15px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   position: fixed;
-  z-index: 3;
   background-color: white;
+  z-index: 3;
 }
 
 .nav {
   margin-top: 15px;
-  margin-left: 25px;
   margin-right: 20px;
 }
 .nav__name {
@@ -613,6 +638,7 @@ header {
 }
 .nav__menu {
   width: 10%;
+  position: relative;
   display: inline-block;
   text-align: right;
 }
@@ -625,7 +651,7 @@ input {
   cursor: pointer;
 }
 
-input + label {
+input + .nav__icon {
   cursor: pointer;
   display: inline-block;
   height: 12px;
@@ -634,7 +660,7 @@ input + label {
   background-size: 20px;
 }
 
-input:checked + label {
+input:checked + .nav__icon {
   height: 20px;
   width: 20px;
   background-image: url("./assets/blueCross.png");
@@ -645,16 +671,22 @@ input:checked + label {
   display: none;
 }
 
-input:checked + .nav__links {
+input:checked ~ .nav__links {
   display: block;
+  position: absolute;
+  top: 40px;
+  right: -83px;
   background: white;
-  width: 100vw;
+  z-index: 5;
+}
+input:checked ~ .nav__links ul li {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 20px;
 }
 
 main {
   text-align: center;
-  position: relative;
-  top: 140px;
 }
 
 img {
@@ -677,19 +709,28 @@ footer {
     width: 40%;
   }
   .nav__menu {
+    display: block;
+    width: 40%;
+  }
+  input + .nav__icon {
     display: none;
   }
   .nav__links {
-    display: flex;
+    display: block;
     font-family: "Open Sans";
     font-weight: 800;
   }
-  .nav__links ul a {
+  .nav__links ul li {
+    display: inline-block;
+  }
+  .nav__links ul li a {
     padding: 0 20px;
     color: #a5a5a5;
     text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3.28px;
   }
-  .nav__links ul a:hover {
+  .nav__links ul li a:hover {
     color: black;
     -webkit-text-decoration: underline #08a6e4;
             text-decoration: underline #08a6e4;
