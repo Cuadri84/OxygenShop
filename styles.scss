@@ -37,7 +37,6 @@ header {
 
 .nav {
   margin-top: 15px;
-
   margin-right: 20px;
   &__name {
     display: inline-block;
@@ -46,6 +45,7 @@ header {
     font-weight: 300;
     font-size: 32px;
     line-height: 37px;
+    padding-left: 20px;
   }
   &__menu {
     width: 10%;
@@ -111,19 +111,19 @@ footer {
   //altura del footer
   top: 180px;
 }
-
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 709px) {
   .nav {
     margin-left: 0;
     display: flex;
     align-items: baseline;
     width: 100%;
     &__name {
-      width: 40%;
+      margin-left: 20px;
+      width: 50%;
     }
     &__menu {
       display: block;
-      width: 40%;
+      width: 100%;
     }
   }
   input + .nav__icon {
@@ -137,7 +137,7 @@ footer {
       & li {
         display: inline-block;
         & a {
-          padding: 0 20px;
+          padding: 0 40px 0 0;
           color: #a5a5a5;
           text-decoration: none;
           font-size: 11px;
