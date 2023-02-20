@@ -1,33 +1,19 @@
+//Section1
 @media only screen and (min-width: 481px) {
-  .section1 {
-    & h2 {
-      font-size: 36x;
-    }
-    &__image1 {
-      max-width: 12%;
-    }
-    &__image2and3 {
-      max-width: 18%;
-    }
-  }
-  .section1__images {
-    display: flex;
-    flex-direction: row;
-    padding: 4% 10%;
-  }
   #pc {
     display: none;
   }
   #pcBig {
     display: block;
   }
-
-  //SECTION2 different query bottom down of the document---------------------------------------------
-
+}
+//SECTION2 different query bottom down of the document---------------------------------------------
+@media only screen and (min-width: 690px) {
   //SECTION3--------------------------------------------
   .section3__options {
     display: flex;
     flex-direction: row;
+    max-width: 70%;
     padding: 0 30px;
   }
   .section3__basic {
@@ -56,47 +42,27 @@
     justify-content: space-between;
     padding-top: 30px;
   }
+}
+//SECTION 1 and 2--------------------------------
+@media only screen and (min-width: 862px) {
+  .section1 {
+    & h2 {
+      font-size: 36x;
+    }
+    &__image1 {
+      max-width: 12%;
+    }
+    &__image2and3 {
+      margin-top: 0;
+      max-width: 18%;
+    }
+  }
 
-  //SECTION 4--------------------------
-
-  .section4 {
+  .section1__images {
     display: flex;
     flex-direction: row;
-    width: 80%;
-    & img {
-      min-width: 30px;
-      width: 15%;
-    }
-    &__anyquestions {
-      width: 90%;
-    }
-    &__form {
-      width: 100%;
-      margin: 0 0 0 80px;
-    }
-    &__perks {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      margin-left: 0;
-    }
+    padding: 4% 10%;
   }
-  #leave-mail {
-    margin: 35px 0 38px 0;
-  }
-  #tick {
-    width: 5%;
-  }
-
-  .footer {
-    &__letters {
-      margin-left: 10%;
-      width: 50%;
-    }
-  }
-}
-//SECTION 2--------------------------------
-@media only screen and (min-width: 862px) {
   .section2__block {
     content: "";
     width: 100%;
@@ -217,5 +183,42 @@
   .section2__3 {
     display: flex;
     flex-direction: row;
+  }
+  //SECTION 4--------------------------
+
+  .section4 {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    & img {
+      min-width: 30px;
+      width: 15%;
+    }
+    &__anyquestions {
+      width: 90%;
+    }
+    &__form {
+      width: 100%;
+      margin: 0 0 0 80px;
+    }
+    &__perks {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-left: 0;
+    }
+  }
+  #leave-mail {
+    margin: 35px 0 38px 0;
+  }
+  #consent {
+    width: 5%;
+  }
+
+  .footer {
+    &__letters {
+      margin-left: 10%;
+      width: 50%;
+    }
   }
 }

@@ -27,7 +27,7 @@
       </nav>
     </header>
     <main>
-      <section class="section1">
+      <section class="section1" id="whyus">
         <h1>Sell More!</h1>
         <h4>Open shop on our platform and increase your sales</h4>
         <button type="button">Open your shop</button>
@@ -48,7 +48,7 @@
           </figure>
         </div>
       </section>
-      <section class="section2">
+      <section class="section2" id="benefits">
         <div class="section2__block"></div>
         <div class="section2__1">
           <div class="section2__1imgs">
@@ -110,7 +110,7 @@
         </div>
         <div class="section2__block"></div>
       </section>
-      <section class="section3">
+      <section class="section3" id="prices">
         <h2>Pricing</h2>
         <div class="section3__options">
           <div class="section3__basic">
@@ -204,7 +204,7 @@
           </div>
         </div>
       </section>
-      <section class="section4">
+      <section class="section4" id="contact">
         <div class="section4__anyquestions">
           <h2>Any questions?</h2>
           <h4 id="leave-mail">Leave your email adress or call us!</h4>
@@ -220,25 +220,35 @@
           </div>
         </div>
         <div class="section4__form">
-          <h4 class="section4__h4">NAME</h4>
-          <div class="line"></div>
-          <h4 class="section4__h4">EMAIL</h4>
-          <div class="line"></div>
-          <div class="section4__perks">
-            <img src="./assets/blue checkbox.png" id="tick" />
-            <p class="section4__perks__h5">
-              I hereby give consent for my personal data included in my
-              application to be processed for the purposes of the recruitment
-              process under the European Parliament’s and Council of the
-              European Union Regulation on the Protection of Natural Persons as
-              of 27 April 2016, with regard to the processing of personal data
-              and on the free movement of such data, and repealing Directive
-              95/46/EC (Data Protection Directive)
-            </p>
-          </div>
-          <div id="send">
-            <button type="button">Send</button>
-          </div>
+          <form>
+            <h4 class="section4__h4">NAME</h4>
+            <div class="line"></div>
+            <h4 class="section4__h4">EMAIL</h4>
+            <div class="line"></div>
+            <div class="section4__perks">
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                value="Consent"
+              />
+              <label for="consent"
+                ><p class="section4__perks__h5">
+                  I hereby give consent for my personal data included in my
+                  application to be processed for the purposes of the
+                  recruitment process under the European Parliament’s and
+                  Council of the European Union Regulation on the Protection of
+                  Natural Persons as of 27 April 2016, with regard to the
+                  processing of personal data and on the free movement of such
+                  data, and repealing Directive 95/46/EC (Data Protection
+                  Directive)
+                </p>
+              </label>
+            </div>
+            <div id="send">
+              <button type="button">Send</button>
+            </div>
+          </form>
         </div>
       </section>
     </main>

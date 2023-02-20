@@ -76,7 +76,7 @@ input:checked + .nav__icon {
   background-image: url("./assets/blueCross.png");
   background-size: 20px;
 }
-//NO funciona hamburquesa para los links
+
 .nav__links {
   display: none;
 }
@@ -84,7 +84,6 @@ input:checked + .nav__icon {
 input:checked ~ .nav__links {
   display: block;
   position: absolute;
-
   top: 40px;
   right: -83px;
   background: white;
@@ -94,6 +93,12 @@ input:checked ~ .nav__links {
       list-style-type: none;
       text-align: left;
       padding-left: 20px;
+    }
+    & a {
+      color: #a5a5a5;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 3.28px;
     }
   }
 }
