@@ -12,18 +12,14 @@
     <header>
       <nav class="nav">
         <h1 class="nav__name">OXYGENShop</h1>
-        <div class="nav__menu">
-          <input type="checkbox" id="burguer" />
-          <label class="nav__icon" for="burguer"></label>
-          <div class="nav__links" for="burguer">
-            <ul>
-              <li><a href="#whyus" class="nav__link">WHY US</a></li>
-              <li><a href="#benefits" class="nav__link">BENEFITS</a></li>
-              <li><a href="#prices" class="nav__link">PRICES</a></li>
-              <li><a href="#contact" class="nav__link">CONTACT</a></li>
-            </ul>
-          </div>
-        </div>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#whyus" class="nav__link">WHY US</a></li>
+          <li><a href="#benefits" class="nav__link">BENEFITS</a></li>
+          <li><a href="#prices" class="nav__link">PRICES</a></li>
+          <li><a href="#contact" class="nav__link">CONTACT</a></li>
+        </ul>
+        <input type="checkbox" id="burguer" />
+        <label class="nav__icon" for="burguer"></label>
       </nav>
     </header>
     <main>
@@ -251,6 +247,7 @@
           </form>
         </div>
       </section>
+      <button class="upButton" id="upButton">Go UP &#8593;</button>
     </main>
     <footer class="footer">
       <div class="footer__letters">
@@ -263,4 +260,5 @@
       </div>
     </footer>
   </body>
+  <script src="./index.js"></script>
 </html>

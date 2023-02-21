@@ -3,10 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Space+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 .section1 h1 {
   font-size: 35px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .section1 h4 {
@@ -157,7 +157,7 @@
   font-size: 30px;
   font-weight: 500;
 }
-.section2__3text h3 {
+.section2__3text h5 {
   font-size: 14px;
   font-family: "Open Sans";
   font-weight: 400;
@@ -423,7 +423,7 @@
 }
 .footer h1 {
   color: #08a6e4;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 32px;
   line-height: 37px;
 }
@@ -674,13 +674,12 @@ header {
 
 .nav {
   margin-top: 15px;
-  margin-right: 20px;
 }
 .nav__name {
   display: inline-block;
   width: 85%;
   color: #08a6e4;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 32px;
   line-height: 37px;
   padding-left: 20px;
@@ -693,6 +692,36 @@ header {
 }
 .nav__menu__input {
   display: none;
+}
+
+.nav__links {
+  position: fixed;
+  padding-bottom: 10px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.29);
+  top: 60px;
+  left: -110%;
+  width: 100%;
+  background: white;
+  z-index: 5;
+}
+.nav__links li {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 20px;
+}
+.nav__links a {
+  color: #a5a5a5;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 3.28px;
+}
+.nav__links a:hover {
+  color: black;
+}
+
+.nav__links.active {
+  left: 0;
 }
 
 input {
@@ -716,28 +745,14 @@ input:checked + .nav__icon {
   background-size: 20px;
 }
 
-.nav__links {
-  display: none;
-}
-
-input:checked ~ .nav__links {
-  display: block;
-  position: absolute;
-  top: 40px;
-  right: -83px;
-  background: white;
-  z-index: 5;
-}
-input:checked ~ .nav__links ul li {
-  list-style-type: none;
-  text-align: left;
-  padding-left: 20px;
-}
-input:checked ~ .nav__links ul a {
-  color: #a5a5a5;
-  text-decoration: none;
-  font-size: 11px;
-  letter-spacing: 3.28px;
+.upButton {
+  cursor: pointer;
+  margin-top: 50px;
+  padding: 6px 14px;
+  border-radius: 56px;
+  border: none;
+  color: #fff;
+  background: #08a6e4;
 }
 
 main {
@@ -750,10 +765,10 @@ img {
 
 footer {
   position: relative;
-  top: 180px;
+  top: 50px;
 }
 
-@media only screen and (min-width: 709px) {
+@media only screen and (min-width: 815px) {
   .nav {
     margin-left: 0;
     display: flex;
@@ -772,25 +787,28 @@ footer {
     display: none;
   }
   .nav__links {
-    display: block;
+    position: relative;
+    display: flex;
+    box-shadow: none;
     font-family: "Open Sans";
     font-weight: 800;
+    left: 0px;
+    top: -10px;
   }
-  .nav__links ul li {
+  .nav__links li {
     display: inline-block;
   }
-  .nav__links ul li a {
-    padding: 0 40px 0 0;
+  .nav__links li a {
     color: #a5a5a5;
     text-decoration: none;
     font-size: 11px;
     letter-spacing: 3.28px;
   }
-  .nav__links ul li a:hover {
+  .nav__links li a:hover {
     color: black;
     -webkit-text-decoration: underline #08a6e4;
             text-decoration: underline #08a6e4;
     text-decoration-thickness: 3px;
-    text-underline-offset: 18px;
+    text-underline-offset: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */

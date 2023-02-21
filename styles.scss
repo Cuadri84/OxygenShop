@@ -4,7 +4,7 @@
 @use "sass/_section4.scss";
 @use "sass/_footer.scss";
 @use "sass/_desktop.scss";
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 // variable
 
@@ -37,12 +37,11 @@ header {
 
 .nav {
   margin-top: 15px;
-  margin-right: 20px;
   &__name {
     display: inline-block;
     width: 85%;
     color: $blue;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 32px;
     line-height: 37px;
     padding-left: 20px;
@@ -56,6 +55,37 @@ header {
       display: none;
     }
   }
+}
+
+//WITH JS
+.nav__links {
+  position: fixed;
+  padding-bottom: 10px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.29);
+  top: 60px;
+  left: -110%;
+  width: 100%;
+  background: white;
+  z-index: 5;
+
+  & li {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 20px;
+  }
+  & a {
+    color: #a5a5a5;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3.28px;
+  }
+  & a:hover {
+    color: black;
+  }
+}
+.nav__links.active {
+  left: 0;
 }
 
 input {
@@ -77,33 +107,16 @@ input:checked + .nav__icon {
   background-size: 20px;
 }
 
-.nav__links {
-  display: none;
+//up button
+.upButton {
+  cursor: pointer;
+  margin-top: 50px;
+  padding: 6px 14px;
+  border-radius: 56px;
+  border: none;
+  color: #fff;
+  background: $blue;
 }
-
-input:checked ~ .nav__links {
-  display: block;
-  position: absolute;
-  top: 40px;
-  right: -83px;
-  background: white;
-  z-index: 5;
-  & ul {
-    & li {
-      list-style-type: none;
-      text-align: left;
-      padding-left: 20px;
-    }
-    & a {
-      color: #a5a5a5;
-      text-decoration: none;
-      font-size: 11px;
-      letter-spacing: 3.28px;
-    }
-  }
-}
-
-//-------------------------------------------
 
 main {
   text-align: center;
@@ -113,10 +126,10 @@ img {
 }
 footer {
   position: relative;
-  //altura del footer
-  top: 180px;
+  top: 50px;
 }
-@media only screen and (min-width: 709px) {
+
+@media only screen and (min-width: 815px) {
   .nav {
     margin-left: 0;
     display: flex;
@@ -135,25 +148,28 @@ footer {
     display: none;
   }
   .nav__links {
-    display: block;
+    position: relative;
+    display: flex;
+    box-shadow: none;
     font-family: $font-two;
     font-weight: 800;
-    & ul {
-      & li {
-        display: inline-block;
-        & a {
-          padding: 0 40px 0 0;
-          color: #a5a5a5;
-          text-decoration: none;
-          font-size: 11px;
-          letter-spacing: 3.28px;
-        }
-        & a:hover {
-          color: black;
-          text-decoration: underline $blue;
-          text-decoration-thickness: 3px;
-          text-underline-offset: 18px;
-        }
+    left: 0px;
+    top: -10px;
+
+    & li {
+      display: inline-block;
+      & a {
+        color: #a5a5a5;
+        text-decoration: none;
+        font-size: 11px;
+        letter-spacing: 3.28px;
+      }
+
+      & a:hover {
+        color: black;
+        text-decoration: underline $blue;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 30px;
       }
     }
   }
