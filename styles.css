@@ -349,9 +349,11 @@
 .section4 h2 {
   font-size: 47px;
 }
-.section4 h4 {
+.section4 label {
   font-size: 11px;
   font-weight: 900;
+  color: #08a6e4;
+  letter-spacing: 3.38px;
 }
 .section4 h5 {
   color: #a5a5a5;
@@ -377,12 +379,6 @@
   margin-left: 10px;
   font-family: "Open Sans";
 }
-.section4__h4 {
-  color: #08a6e4;
-  font-family: "Open Sans";
-  line-height: 15px;
-  letter-spacing: 4px;
-}
 .section4__form {
   margin-top: 55px;
 }
@@ -400,10 +396,24 @@
   margin-top: 33px;
 }
 
+#nameValue {
+  display: block;
+  margin-top: 20px;
+  border-style: none;
+  width: 100%;
+}
+
+#mail {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  border-style: none;
+}
+
 .line {
   height: 1px;
   background: #95989a;
-  margin: 40px 0;
+  margin: 10px 0;
 }
 
 #leave-mail {
@@ -745,16 +755,11 @@ input:checked + .nav__icon {
   background-size: 20px;
 }
 
-.progress__bar {
+.progress__bar__colored {
   position: absolute;
-  width: 100%;
   height: 5px;
+  width: 0%;
   top: 100%;
-}
-.progress__bar .progress__bar__colored {
-  position: absolute;
-  height: 5px;
-  width: 50%;
   background-color: #08a6e4;
 }
 

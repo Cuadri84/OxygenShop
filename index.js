@@ -42,3 +42,28 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 });
+
+//form validation
+const nameValue = document.getElementById("nameValue");
+const mail = document.getElementById("mail");
+const consent = document.getElementById("consent");
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const nameValueLength = e.target.nameValue.value.length;
+  const mailValue = e.target.mail.value;
+  const expReg =
+    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+
+  if (nameValueLength <= 1 || nameValueLength >= 100) {
+    document.getElementById("nameValue").style.borderStyle = "solid";
+    document.getElementById("nameValue").style.borderColor = "red";
+  }
+  if (expReg.test(mailValue)) {
+    console.log("correcto");
+  } else {
+    document.getElementById("mail").style.borderStyle = "solid";
+    document.getElementById("mail").style.borderColor = "red";
+  }
+});

@@ -15,9 +15,11 @@ $blue: #08a6e4;
   & h2 {
     font-size: 47px;
   }
-  & h4 {
+  & label {
     font-size: 11px;
     font-weight: 900;
+    color: $blue;
+    letter-spacing: 3.38px;
   }
   & h5 {
     color: #a5a5a5;
@@ -43,12 +45,6 @@ $blue: #08a6e4;
       font-family: $font-two;
     }
   }
-  &__h4 {
-    color: $blue;
-    font-family: $font-two;
-    line-height: 15px;
-    letter-spacing: 4px;
-  }
   &__form {
     margin-top: 55px;
   }
@@ -66,10 +62,22 @@ $blue: #08a6e4;
     margin-top: 33px;
   }
 }
+#nameValue {
+  display: block;
+  margin-top: 20px;
+  border-style: none;
+  width: 100%;
+}
+#mail {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  border-style: none;
+}
 .line {
   height: 1px;
   background: #95989a;
-  margin: 40px 0;
+  margin: 10px 0;
 }
 
 #leave-mail {

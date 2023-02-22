@@ -21,9 +21,8 @@
         <input type="checkbox" id="burguer" />
         <label class="nav__icon" for="burguer"></label>
       </nav>
-      <div class="progress__bar">
-        <div class="progress__bar__colored" id="coloredBar"></div>
-      </div>
+
+      <div class="progress__bar__colored" id="coloredBar"></div>
     </header>
     <main>
       <section class="section1" id="whyus">
@@ -221,18 +220,15 @@
           </div>
         </div>
         <div class="section4__form">
-          <form>
-            <h4 class="section4__h4">NAME</h4>
+          <form id="form">
+            <label class="section4__h4" for="nameValue">NAME</label>
+            <input type="text" id="nameValue" name="nameValue" />
             <div class="line"></div>
-            <h4 class="section4__h4">EMAIL</h4>
+            <label class="section4__h4" for="mail">EMAIL</label>
+            <input type="text" id="mail" name="mail" />
             <div class="line"></div>
             <div class="section4__perks">
-              <input
-                type="checkbox"
-                id="consent"
-                name="consent"
-                value="Consent"
-              />
+              <input type="checkbox" id="consent" name="consent" />
               <label for="consent"
                 ><p class="section4__perks__h5">
                   I hereby give consent for my personal data included in my
@@ -247,7 +243,7 @@
               </label>
             </div>
             <div id="send">
-              <button type="button">Send</button>
+              <button type="submit">Send</button>
             </div>
           </form>
         </div>
