@@ -57,7 +57,6 @@ header {
   }
 }
 
-//WITH JS
 .nav__links {
   position: fixed;
   padding-bottom: 10px;
@@ -107,7 +106,19 @@ input:checked + .nav__icon {
   background-size: 20px;
 }
 
-//up button
+.progress__bar {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 100%;
+  .progress__bar__colored {
+    position: absolute;
+    height: 5px;
+    width: 50%;
+    background-color: $blue;
+  }
+}
+
 .upButton {
   cursor: pointer;
   margin-top: 50px;

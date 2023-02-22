@@ -21,12 +21,17 @@
         <input type="checkbox" id="burguer" />
         <label class="nav__icon" for="burguer"></label>
       </nav>
+      <div class="progress__bar">
+        <div class="progress__bar__colored" id="coloredBar"></div>
+      </div>
     </header>
     <main>
       <section class="section1" id="whyus">
         <h1>Sell More!</h1>
         <h4>Open shop on our platform and increase your sales</h4>
-        <button type="button">Open your shop</button>
+        <button onclick="calculatePercentage" type="button">
+          Open your shop
+        </button>
         <figure>
           <img src="./assets/pc.png" id="pc" />
           <img src="./assets/pcBig.png" id="pcBig" />
