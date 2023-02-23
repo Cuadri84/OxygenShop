@@ -369,11 +369,6 @@
 .section4__perks__img {
   display: inline-block;
 }
-.section4__perks #consent {
-  display: inline-block;
-  margin-top: 5px;
-  vertical-align: top;
-}
 .section4__perks__h5 {
   display: inline-block;
   margin-left: 10px;
@@ -414,6 +409,12 @@
   height: 1px;
   background: #95989a;
   margin: 10px 0;
+}
+
+#consent {
+  display: inline-block;
+  margin-top: 5px;
+  vertical-align: top;
 }
 
 #leave-mail {

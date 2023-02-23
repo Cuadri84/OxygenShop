@@ -34,11 +34,6 @@ $blue: #08a6e4;
     &__img {
       display: inline-block;
     }
-    & #consent {
-      display: inline-block;
-      margin-top: 5px;
-      vertical-align: top;
-    }
     &__h5 {
       display: inline-block;
       margin-left: 10px;
@@ -78,6 +73,11 @@ $blue: #08a6e4;
   height: 1px;
   background: #95989a;
   margin: 10px 0;
+}
+#consent {
+  display: inline-block;
+  margin-top: 5px;
+  vertical-align: top;
 }
 
 #leave-mail {
