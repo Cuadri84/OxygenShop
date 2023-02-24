@@ -1,4 +1,4 @@
-//GO UP BUTTON
+//GO UP BUTTON------------------------------------------------
 const goUpWithTimer = () => {
   setTimeout(goUp, 200);
 };
@@ -14,7 +14,7 @@ const goUp = () => {
   });
 };
 
-//HAMBURGUER MENU
+//HAMBURGUER MENU----------------------------------------------
 
 const burguer = document.getElementById("burguer");
 const navLinks = document.getElementById("navLinks");
@@ -23,7 +23,7 @@ burguer.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-//PROGRESS BAR
+//PROGRESS BAR---------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
   const coloredBar = document.getElementById("coloredBar");
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
-//FORM VALIDATION AND FETCH
+//FORM VALIDATION AND FETCH-----------------------------------------
 
 const nameValue = document.getElementById("nameValue");
 const mail = document.getElementById("mail");
@@ -52,14 +52,14 @@ const consent = document.getElementById("consent");
 const form = document.getElementById("form");
 let nameOK = "";
 const url = "https://jsonplaceholder.typicode.com/posts";
+const expReg =
+  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const nameValueLength = e.target.nameValue.value.length;
   const mailValue = e.target.mail.value;
   const checked = e.target.consent.checked;
-  const expReg =
-    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
   if (
     checked === true &&
@@ -71,17 +71,17 @@ form.addEventListener("submit", (e) => {
   }
 
   if (nameValueLength <= 1 || nameValueLength >= 100) {
-    document.getElementById("nameValue").style.borderStyle = "solid";
-    document.getElementById("nameValue").style.borderColor = "red";
+    nameValue.style.borderStyle = "solid";
+    nameValue.style.borderColor = "red";
   }
 
   if (!expReg.test(mailValue)) {
-    document.getElementById("mail").style.borderStyle = "solid";
-    document.getElementById("mail").style.borderColor = "red";
+    mail.style.borderStyle = "solid";
+    mail.style.borderColor = "red";
   }
 
   if (checked === false) {
-    document.getElementById("consent").style.outline = "2px solid #c00";
+    consent.style.outline = "2px solid #c00";
   }
 });
 
@@ -101,4 +101,50 @@ function sendUser(url, nameOK, mailOK) {
     .catch((err) => console.log(err));
 }
 
-//MODAL
+//MODAL----------------------------------------------------------------------
+const modal = document.getElementById("modal");
+const overlay = document.getElementById("overlay");
+const x = document.getElementById("closeModal");
+
+//modal open
+window.onload = () => {
+  setTimeout(showPopup, 4000);
+};
+
+const showPopup = () => {
+  modal.classList.add("active");
+  overlay.classList.add("active");
+};
+
+//modal close
+
+x.addEventListener("click", () => {
+  modal.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+overlay.addEventListener("click", () => {
+  modal.classList.remove("active");
+  overlay.classList.remove("active");
+});
+document.body.addEventListener("keydown", (e) => {
+  if (e.code === "Escape") {
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+});
+
+//modal form
+const modalMail = document.getElementById("modal-mail");
+const modalForm = document.getElementById("modal-form");
+const newsletterUser = "Newsletter User";
+console.log(modalMail);
+
+modalForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const modalMailValue = e.target.modalMail.value;
+
+  expReg.test(modalMailValue)
+    ? sendUser(url, newsletterUser, modalMailValue)
+    : (modalMail.style.borderColor = "red");
+});
