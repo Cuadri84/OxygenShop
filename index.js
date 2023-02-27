@@ -138,7 +138,6 @@ document.body.addEventListener("keydown", (e) => {
 const modalMail = document.getElementById("modal-mail");
 const modalForm = document.getElementById("modal-form");
 const newsletterUser = "Newsletter User";
-console.log(modalMail);
 
 modalForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -147,4 +146,39 @@ modalForm.addEventListener("submit", (e) => {
   expReg.test(modalMailValue)
     ? sendUser(url, newsletterUser, modalMailValue)
     : (modalMail.style.borderColor = "red");
+});
+
+//CURRENCY EXCHANGE------------------------------------------------------------
+
+const apiCurrency = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json`;
+
+const getCurrency = async () => {
+  const response = await fetch(apiCurrency);
+  let data = await response.json();
+  return data;
+};
+
+const select = document.getElementById("selector");
+const basic = document.getElementById("basic");
+const pro = document.getElementById("pro");
+const premium = document.getElementById("premium");
+
+getCurrency().then((data) => {
+  select.addEventListener("change", (e) => {
+    if (e.target.value == "usd") {
+      basic.textContent = "$0";
+      pro.textContent = "$" + Math.round(parseFloat(25 * data.eur.usd));
+      premium.textContent = "$" + parseFloat(60 * data.eur.usd).toFixed(0);
+    }
+    if (e.target.value == "gbp") {
+      basic.textContent = "£0";
+      pro.textContent = "£" + Math.round(parseFloat(25 * data.eur.gbp));
+      premium.textContent = "£" + parseFloat(60 * data.eur.gbp).toFixed(0);
+    }
+    if (e.target.value == "eur") {
+      basic.textContent = "€0";
+      pro.textContent = "€25";
+      premium.textContent = "€60";
+    }
+  });
 });

@@ -243,7 +243,7 @@
 }
 .section3__basic {
   width: 80%;
-  margin: 40px auto;
+  margin: 50px auto;
   border: 1px solid #fb3b64;
   border-radius: 18px;
 }
@@ -282,7 +282,7 @@
 }
 .section3__professional {
   width: 80%;
-  margin: 40px auto;
+  margin: 50px auto;
   border: 1px solid #07ace6;
   border-radius: 18px;
 }
@@ -310,7 +310,7 @@
 }
 .section3__premium {
   width: 80%;
-  margin: 40px auto;
+  margin: 50px auto;
   border: 1px solid #55dfb4;
   border-radius: 18px;
 }
@@ -737,7 +737,7 @@
 }
 
 @media only screen and (min-width: 605px) {
-  .modal {
+  #modal {
     width: 450px;
     height: 250px;
   }
