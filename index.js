@@ -198,6 +198,7 @@ image.src = images[0];
 let arrowRight = document.getElementById("right");
 let arrowLeft = document.getElementById("left");
 let index = 0;
+const dots = document.querySelectorAll("span");
 
 //arrows
 function slideRight() {
@@ -206,6 +207,8 @@ function slideRight() {
     index = 0;
   }
   document.image.src = images[index];
+  //no funciona que la imagen coincida con el dot automaticamente
+  // dots[index].style.background = "white";
 }
 //infinite slide
 setInterval(slideRight, 3000);
@@ -217,4 +220,19 @@ arrowLeft.addEventListener("click", () => {
     index = images.length - 1;
   }
   document.image.src = images[index];
+});
+
+//dots
+let dot1 = document.getElementById("dot1");
+let dot2 = document.getElementById("dot2");
+let dot3 = document.getElementById("dot3");
+
+dot1.addEventListener("click", () => {
+  document.image.src = images[0];
+});
+dot2.addEventListener("click", () => {
+  document.image.src = images[1];
+});
+dot3.addEventListener("click", () => {
+  document.image.src = images[2];
 });

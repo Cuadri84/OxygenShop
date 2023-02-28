@@ -763,6 +763,24 @@
   width: 90%;
 }
 
+#dots {
+  position: absolute;
+  display: flex;
+  left: 40%;
+  transform: translateY(480%);
+}
+#dots span {
+  height: 15px;
+  width: 15px;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+#dots span:hover {
+  background: white;
+}
+
 @media only screen and (min-width: 1218px) {
   .right {
     transform: translateX(-320%);
