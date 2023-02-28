@@ -723,10 +723,7 @@
   z-index: 4;
   opacity: 0;
   transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
@@ -743,6 +740,35 @@
   }
   #modal-form {
     height: 200px;
+  }
+}
+.slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  width: 30px;
+  transform: translateX(180%);
+  cursor: pointer;
+}
+
+.right {
+  width: 30px;
+  transform: translateX(-180%);
+  cursor: pointer;
+}
+
+.sliders {
+  width: 90%;
+}
+
+@media only screen and (min-width: 1218px) {
+  .right {
+    transform: translateX(-320%);
+  }
+  .left {
+    transform: translateX(320%);
   }
 }
 * {

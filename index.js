@@ -182,3 +182,39 @@ getCurrency().then((data) => {
     }
   });
 });
+
+//SLIDER---------------------------------------------------------------------
+
+const images = [
+  "assets/slider/neon.jpg",
+  "assets/slider/bakery.jpg",
+  "assets/slider/hop.jpg",
+];
+
+let image = document.getElementById("image");
+console.log(image);
+image.src = images[0];
+
+let arrowRight = document.getElementById("right");
+let arrowLeft = document.getElementById("left");
+let index = 0;
+
+//arrows
+function slideRight() {
+  index++;
+  if (index > images.length - 1) {
+    index = 0;
+  }
+  document.image.src = images[index];
+}
+//infinite slide
+setInterval(slideRight, 3000);
+
+arrowRight.addEventListener("click", slideRight);
+arrowLeft.addEventListener("click", () => {
+  index--;
+  if (index < 0) {
+    index = images.length - 1;
+  }
+  document.image.src = images[index];
+});

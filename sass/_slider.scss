@@ -1,0 +1,28 @@
+.slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  width: 30px;
+  transform: translateX(180%);
+  cursor: pointer;
+}
+.right {
+  width: 30px;
+  transform: translateX(-180%);
+  cursor: pointer;
+}
+
+.sliders {
+  width: 90%;
+}
+
+@media only screen and (min-width: 1218px) {
+  .right {
+    transform: translateX(-320%);
+  }
+  .left {
+    transform: translateX(320%);
+  }
+}
