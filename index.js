@@ -105,10 +105,15 @@ function sendUser(url, nameOK, mailOK) {
 const modal = document.getElementById("modal");
 const overlay = document.getElementById("overlay");
 const x = document.getElementById("closeModal");
+console.log(Storage);
 
 //modal open
 window.onload = () => {
-  setTimeout(showPopup, 4000);
+  if (localStorage.getItem("close")) {
+    console.log("already modal closed");
+  } else {
+    setTimeout(showPopup, 4000);
+  }
 };
 
 const showPopup = () => {
@@ -117,20 +122,23 @@ const showPopup = () => {
 };
 
 //modal close
-
+let close = "closed";
 x.addEventListener("click", () => {
   modal.classList.remove("active");
   overlay.classList.remove("active");
+  localStorage.close = "closed";
 });
 
 overlay.addEventListener("click", () => {
   modal.classList.remove("active");
   overlay.classList.remove("active");
+  localStorage.close = "closed";
 });
 document.body.addEventListener("keydown", (e) => {
   if (e.code === "Escape") {
     modal.classList.remove("active");
     overlay.classList.remove("active");
+    localStorage.close = "closed";
   }
 });
 
