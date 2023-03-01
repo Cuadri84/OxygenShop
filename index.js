@@ -192,7 +192,6 @@ const images = [
 ];
 
 let image = document.getElementById("image");
-console.log(image);
 image.src = images[0];
 
 let arrowRight = document.getElementById("right");
@@ -207,7 +206,7 @@ function slideRight() {
     index = 0;
   }
   document.image.src = images[index];
-  //no funciona que la imagen coincida con el dot automaticamente
+  //dots doesnt work when it is infinite slide
   // dots[index].style.background = "white";
 }
 //infinite slide

@@ -781,7 +781,21 @@
   background: white;
 }
 
+@media only screen and (min-width: 620px) {
+  #dots {
+    transform: translateY(1000%);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #dots {
+    left: 45%;
+    transform: translateY(1800%);
+  }
+}
 @media only screen and (min-width: 1218px) {
+  #dots {
+    transform: translateY(2300%);
+  }
   .right {
     transform: translateX(-320%);
   }
