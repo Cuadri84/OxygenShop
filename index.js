@@ -1,4 +1,5 @@
 //GO UP BUTTON------------------------------------------------
+
 const goUpWithTimer = () => {
   setTimeout(goUp, 200);
 };
@@ -102,16 +103,15 @@ function sendUser(url, nameOK, mailOK) {
 }
 
 //MODAL----------------------------------------------------------------------
+
 const modal = document.getElementById("modal");
 const overlay = document.getElementById("overlay");
 const x = document.getElementById("closeModal");
-console.log(Storage);
 
 //modal open
+
 window.onload = () => {
-  if (localStorage.getItem("close")) {
-    console.log("already modal closed");
-  } else {
+  if (!localStorage.getItem("close")) {
     setTimeout(showPopup, 4000);
   }
 };
@@ -122,27 +122,25 @@ const showPopup = () => {
 };
 
 //modal close
-let close = "closed";
-x.addEventListener("click", () => {
-  modal.classList.remove("active");
-  overlay.classList.remove("active");
-  localStorage.close = "closed";
-});
 
-overlay.addEventListener("click", () => {
+const closeModal = () => {
   modal.classList.remove("active");
   overlay.classList.remove("active");
   localStorage.close = "closed";
-});
+};
+
+let close = "closed";
+
+x.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
 document.body.addEventListener("keydown", (e) => {
   if (e.code === "Escape") {
-    modal.classList.remove("active");
-    overlay.classList.remove("active");
-    localStorage.close = "closed";
+    closeModal;
   }
 });
 
 //modal form
+
 const modalMail = document.getElementById("modal-mail");
 const modalForm = document.getElementById("modal-form");
 const newsletterUser = "Newsletter User";
@@ -190,6 +188,7 @@ getCurrency().then((data) => {
     }
   });
 });
+//TODO ponerle catch?
 
 //SLIDER---------------------------------------------------------------------
 
@@ -208,26 +207,45 @@ let index = 0;
 const dots = document.querySelectorAll("span");
 
 //arrows
+
 function slideRight() {
+  startInterval();
+  const oldIndex = index;
   index++;
   if (index > images.length - 1) {
     index = 0;
   }
   document.image.src = images[index];
-  //dots doesnt work when it is infinite slide
-  // dots[index].style.background = "white";
-}
-//infinite slide
-setInterval(slideRight, 3000);
 
-arrowRight.addEventListener("click", slideRight);
-arrowLeft.addEventListener("click", () => {
+  dots[index].style.background = "white";
+  dots[oldIndex].style.background = "transparent";
+}
+function slideLeft() {
+  startInterval();
+  const oldIndex = index;
   index--;
   if (index < 0) {
     index = images.length - 1;
   }
   document.image.src = images[index];
-});
+
+  dots[index].style.background = "white";
+  dots[oldIndex].style.background = "transparent";
+}
+
+//infinite slide
+let interval = null;
+function startInterval() {
+  if (interval) clearInterval(interval);
+  interval = setInterval(() => {
+    slideRight();
+  }, 3000);
+}
+
+startInterval();
+
+arrowRight.addEventListener("click", slideRight);
+arrowLeft.addEventListener("click", slideLeft);
 
 //dots
 let dot1 = document.getElementById("dot1");
@@ -236,10 +254,22 @@ let dot3 = document.getElementById("dot3");
 
 dot1.addEventListener("click", () => {
   document.image.src = images[0];
+  startInterval();
+  dot1.style.background = "white";
+  dot2.style.background = "transparent";
+  dot3.style.background = "transparent";
 });
 dot2.addEventListener("click", () => {
   document.image.src = images[1];
+  startInterval();
+  dot1.style.background = "transparent";
+  dot2.style.background = "white";
+  dot3.style.background = "transparent";
 });
 dot3.addEventListener("click", () => {
   document.image.src = images[2];
+  startInterval();
+  dot1.style.background = "transparent";
+  dot2.style.background = "transparent";
+  dot3.style.background = "white";
 });

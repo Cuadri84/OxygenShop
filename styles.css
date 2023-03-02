@@ -744,30 +744,36 @@
 }
 .slider-container {
   display: flex;
-  align-items: center;
+  position: relative;
+  width: 90%;
 }
 
 .left {
+  position: absolute;
   width: 30px;
-  transform: translateX(180%);
+  top: 50%;
+  left: 20px;
   cursor: pointer;
 }
 
 .right {
+  position: absolute;
   width: 30px;
-  transform: translateX(-180%);
+  right: 20px;
+  top: 50%;
   cursor: pointer;
 }
 
 .sliders {
-  width: 90%;
+  width: 100%;
 }
 
 #dots {
   position: absolute;
   display: flex;
-  left: 40%;
-  transform: translateY(480%);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
 }
 #dots span {
   height: 15px;
@@ -781,28 +787,6 @@
   background: white;
 }
 
-@media only screen and (min-width: 620px) {
-  #dots {
-    transform: translateY(1000%);
-  }
-}
-@media only screen and (min-width: 1000px) {
-  #dots {
-    left: 45%;
-    transform: translateY(1800%);
-  }
-}
-@media only screen and (min-width: 1218px) {
-  #dots {
-    transform: translateY(2300%);
-  }
-  .right {
-    transform: translateX(-320%);
-  }
-  .left {
-    transform: translateX(320%);
-  }
-}
 * {
   box-sizing: border-box;
   margin: 0 auto;
