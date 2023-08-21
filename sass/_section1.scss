@@ -48,6 +48,11 @@ $font-two: "Open Sans";
     box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
     border-radius: 40px;
     border-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 

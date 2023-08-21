@@ -24,6 +24,11 @@ burguer.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
+//REDIRECT BUTTON oXYGENsHOP-----------------------
+function redirectToPrices() {
+  window.location.href = "#prices";
+}
+
 //PROGRESS BAR---------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -100,6 +105,8 @@ function sendUser(url, nameOK, mailOK) {
     .then((response) => response.json())
     .then((data) => console.log(data))
     .catch((err) => console.log(err));
+  alert("email recived");
+  closeModal();
 }
 
 //MODAL----------------------------------------------------------------------
@@ -188,7 +195,6 @@ getCurrency().then((data) => {
     }
   });
 });
-//TODO ponerle catch?
 
 //SLIDER---------------------------------------------------------------------
 

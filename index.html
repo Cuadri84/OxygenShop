@@ -27,7 +27,7 @@
       <section class="section1" id="whyus">
         <h1>Sell More!</h1>
         <h4>Open shop on our platform and increase your sales</h4>
-        <button onclick="calculatePercentage" type="button">
+        <button id="OxygenShop" onclick="redirectToPrices();" type="button">
           Open your shop
         </button>
         <figure>
@@ -53,7 +53,12 @@
           <button id="closeModal">&times;</button>
         </div>
         <form id="modal-form">
-          <input type="text" id="modal-mail" name="modalMail" />
+          <input
+            type="text"
+            id="modal-mail"
+            name="modalMail"
+            placeholder="  Insert your email here"
+          />
           <div id="modal-form__send">
             <button type="submit">Send Mail</button>
           </div>
